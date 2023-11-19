@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Terminal Style</title>
+<style>
+#showAsciiBtn {
+            background: none;
+            border: none;
+            color: lightgreen;
+            line-height: 1.5;
+            font-size: 16px; /* Set the font size */
+            /*text-decoration: underline;*/
+            cursor: pointer;
+            padding: 0;
+            font-family: monospace;
+        }
+  #asciiArt {
+            display: none;
+            white-space: pre;
+            font-family: monospace;
+        }
+  body {
+    background-color: #0a0a0a;
+    font-family: 'Courier New', Courier, monospace;
+    color: #33ff33;
+    margin: 0;
+    line-height: 1.5; /* Increase the line-height for more space between lines */
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+
+  .terminal {
+    background-color: #0d0d0d;
+    border-radius: 5px;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 255, 0, 0.5);
+    width: 80%; /* Adjust the width as per your requirement */
+    max-width: 1000px; /* Optional: if you want to limit the maximum width */
+  }
+
+  .terminal-header {
+    color: #fff;
+    background-color: #333;
+    padding: 2px 10px;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+  }
+
+  .dot {
+    height: 15px;
+    width: 15px;
+    background-color: #f1c40f;
+    border-radius: 50%;
+    display: inline-block;
+    margin-right: 5px;
+  }
+
+  .green-dot {
+    background-color: #2ecc71;
+  }
+
+  .red-dot {
+    background-color: #e74c3c;
+  }
+
+/*
+  .terminal-body {
+    white-space: pre-wrap;
+    overflow-x: auto;
+  }
+
+  .prompt {
+    margin-bottom: 5px;
+  }
+
+  .input {
+    white-space: pre-wrap;
+    display: inline;
+  }
+  */ 
+  .prompt, .input {
+    margin: 0; /* Removes any default margins */
+    padding: 0; /* Removes any default padding */
+    display: block; /* Ensures the element is a block-level element */
+  }
+
+  .terminal-body {
+    padding-left: 20px; /* This padding will align the text with the prompt if necessary */
+    padding-right: 20px; /* Padding to prevent text from touching the right edge */
+  }
+
+  /* Remove padding-left if you added it specifically to .input in earlier styles */
+  .input {
+    white-space: pre-wrap;
+  }
+
+</style>
+</head>
+<body>
+  <div class="terminal">
+    <div class="terminal-header">
+      <span class="dot red-dot"></span>
+      <span class="dot yellow-dot"></span>
+      <span class="dot green-dot"></span>
+    </div>
+    <div class="terminal-body"> <br>
+      <div class="prompt">$ Eddie_Berman</div>
+      <br>      <div class="input">Optimization, Numerical Linear Algebra, Astronomy, AI, PL</div>
+      <br>      <div class="input">Northeastern University <br>COSMOS-Web: The JWST Cosmic Origins Survey  <br><a href="https://gammatau.ai/" target="_blank" style="color: #33ff33;">GammaTau AI</a></div>
+      <br>
+      </div>
+      <div class="prompt">&gt; <a href="Berman_Edward_CV_Website.pdf" target="_blank" style="color: #33ff33;">CV</a></div> 
+      <div class="prompt">&gt; <a href="research_statement.pdf" target="_blank" style="color: #33ff33;">Research Statement</a></div> 
+      <div class="prompt">&gt; <a href="https://github.com/EdwardBerman" target="_blank" style="color: #33ff33;">GitHub</a></div> 
+      <div class="prompt">&gt; <a href="https://orcid.org/0000-0002-8494-3123" target="_blank" style="color: #33ff33;">ORCID</a></div> 
+      <div class="prompt">&gt; <a href="https://www.linkedin.com/in/edward-berman-324a86226/" target="_blank" style="color: #33ff33;">LinkedIn</a></div> <br>
+      <div class="prompt"> <a = href="https://github.com/BlackPropaganda" target="_blank"  style="color: lightgreen; text-decoration: underline;">"Hackalackin, Not Slackalackin"</a>  
+      <div class="prompt"> <a = href="https://jakegines.in/" target="_blank"  style="color: lightgreen; text-decoration: underline;">"It's Nuts"</a>  
+        <br> <br>      <div class="input">berman [dot] ed [at] northeastern [dot] edu</div>
+
+        <!--<button id="showAsciiBtn" style="text-decoration: underline;">Double Click to See JWST PSF</button>
+      <div class="input">berman [dot] ed [at] northeastern [dot] edu</div>
+        <div id="asciiArt"> 
+        <br> 
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@%@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@<br>
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@%@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@<br>
+@@@@@@@@@@@@%#@@@@@@@@@@@@@@@@@@@@@@@@@%@@@@%@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@<br>
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@#@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@<br>
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@#@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@<br>
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@*@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@<br>
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@*%@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@<br>
+@@@@@@@@@@@@@@@@@@@@@@@@@@%%@@@@@@@@@@@@@@@@*%@@@@@@@@@@@@@@@%%@@@@@@@@@@@@@@@@@@@@@@@@@@@<br>
+@@@@@@@@@@@@@@@@@@@%%@@@@@@@%%%%@@@@@@@@@@@@+%@@@@@@@@@@@@%%%@@@@@@@@@@@@@@@@@@@@@@@@@@@@@<br>
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@%###@@@@@@@@@+#@@@@@@@@%##%@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@<br>
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@#**#%@@%#-+#%%%%***%@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@<br>
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@%#+===-.:-===+%@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@<br>
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@%##*-......-*#%%@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@<br>
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@%*-......-*%@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@<br>
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@#*+*#*+:-+*#*++#@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@<br>
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@###%@@@@@%=+%@@@@@%**#%@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@<br>
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@%##@@@@@@@@@@**@@@@@@@@@@%##%@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@<br>
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@%%%@@@@@@@@@@@@@*#@@@@@@@@@@@@@@%%%@@@@@@@@@@@@@@@@@@@@@@@@@@@<br>
+@@@@@@@@@@@@@@@@@@@@@@@@@%%@@@@@@@@@@@@@@@@@##@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@<br>
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@##@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@<br>
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@%#@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@<br>
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@%#@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@<br>
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@%%@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@<br>
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@**@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@<br>
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@%@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@<br> -->
+      </div>
+    </div>
+  </div>
+<script>
+        document.getElementById("showAsciiBtn").onclick = function() {
+            var asciiArt = document.getElementById("asciiArt");
+            asciiArt.style.display = asciiArt.style.display === "none" ? "block" : "none";
+        };
+    </script>
+</body>
+</html>
+

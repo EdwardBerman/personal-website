@@ -1,5 +1,8 @@
 
 
+
+
+
     .__  __ /\                       __          
     |__|/  |)/ ______   ____  __ ___/  |_  ______
     |  \   __\/  ___/  /    \|  |  \   __\/  ___/
@@ -7,7 +10,11 @@
     |__||__| /____  > |___|  /____/ |__| /____  >
                   \/       \/                 \/
 
-  - Northeastern Math 
+  - Northeastern Physics + Math 
+  - riffed from https://jakegines.in/blog/2022/business-card
+
+
+
 
 
 

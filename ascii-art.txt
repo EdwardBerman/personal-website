@@ -3,6 +3,16 @@
 
 
 
+
+
+
+
+
+
+
+
+
+
     .__  __ /\                       __          
     |__|/  |)/ ______   ____  __ ___/  |_  ______
     |  \   __\/  ___/  /    \|  |  \   __\/  ___/
@@ -12,6 +22,22 @@
 
   - Northeastern Physics + Math 
   - riffed from https://jakegines.in/blog/2022/business-card
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

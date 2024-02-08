@@ -1,0 +1,11 @@
+# On Research and Bullshit Jobs
+
+I am currently reading the book Bullshit Jobs by David Graeber. As an aspiring researcher, here are some scrambly thoughts on why being a researcher is not bullshit, if anything, it is the anti-thesis of bullshit. A bullshit job can be roughly described as a job so meaningless, the workers themselves can not even justify to themselves why the job needs to exist.
+
+## Why is research not bullshit?
+
+1. Heaving a wealth of knowledge is generally very useful. When I write this, I think of the mathematician, the algebraic algebra theorist of algebra. His friend asks him in good faith, why should anyone care about the algebraic algebra theory of algebra? The mathematician replies, down the line, my theory ***may*** have applications. Now, you may be thinking, how could the algebraic algebra theory of algebra possibly have any useful applications. Your concern is well founded. However, the mathematician is not incorrect, you never know when your theory can lead to someone else's big idea.
+
+2. On the other hand, there is the direct and often times immediate impact you can make. When I write this section, I think about my friend saying that AI research moves in dog years. I think about machine learning papers citing papers that were published just months prior and claiming that they have already eclipsed their state of the art. I think about the connections between academia and industry, the ensemble of company recruiters at NeurIPS and ICML, desperate to recruit the top notch researchers to implement their advancements in research for their company. 
+
+3. For culture and for ambition. When I write this, I think about my colleagues: Astronomers and Astrophysicists. Why measure the highest resolution images of the large scale structure of the universe?! Because it's cool! And again, the hypothetical fiscally conservative skeptic (yuck) asks: Why should anyone fund your massive telescopes and your team of scientists if it is all just for your own vanity? To answer this question, I point to the prior two points, but also to this: the small child in his room who sees the jaw dropping image of the pillars of creation and thinks to themself "I want to be a scientist!"

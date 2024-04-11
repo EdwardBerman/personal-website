@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Bermanator</title>
+<style>
+#showAsciiBtn {
+            background: none;
+            border: none;
+            color: lightgreen;
+            line-height: 1.5;
+            font-size: 16px; /* Set the font size */
+            /*text-decoration: underline;*/
+            cursor: pointer;
+            padding: 0;
+            font-family: monospace;
+        }
+  #asciiArt {
+            display: none;
+            white-space: pre;
+            font-family: monospace;
+        }
+  body {
+    background-image: url('JWST.jpeg');
+    background-size: cover; /* Cover the entire window */
+    background-position: center center; /* Center the image in the window */
+    background-attachment: fixed;
+    
+    background-color: #0a0a0a;
+    font-family: 'Courier New', Courier, monospace;
+    color: #33ff33;
+    margin: 0;
+    line-height: 1.5; /* Increase the line-height for more space between lines */
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+
+  .terminal {
+    background-color: rgba(13, 13, 13, 0.9);
+    /*background-color: #0d0d0d;*/
+    border-radius: 5px;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 255, 0, 0.5);
+    width: 80%; /* Adjust the width as per your requirement */
+    max-width: 1000px; /* Optional: if you want to limit the maximum width */
+  }
+
+  .terminal-header {
+    color: #fff;
+    background-color: #333;
+    padding: 2px 10px;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+  }
+
+  .dot {
+    height: 15px;
+    width: 15px;
+    background-color: #f1c40f;
+    border-radius: 50%;
+    display: inline-block;
+    margin-right: 5px;
+  }
+
+  .green-dot {
+    background-color: #2ecc71;
+  }
+
+  .red-dot {
+    background-color: #e74c3c;
+  }
+
+/*
+  .terminal-body {
+    white-space: pre-wrap;
+    overflow-x: auto;
+  }
+
+  .prompt {
+    margin-bottom: 5px;
+  }
+
+  .input {
+    white-space: pre-wrap;
+    display: inline;
+  }
+  */ 
+  .prompt, .input {
+    margin: 0; /* Removes any default margins */
+    padding: 0; /* Removes any default padding */
+    display: block; /* Ensures the element is a block-level element */
+  }
+
+  .terminal-body {
+    padding-left: 20px; /* This padding will align the text with the prompt if necessary */
+    padding-right: 20px; /* Padding to prevent text from touching the right edge */
+  }
+
+  /* Remove padding-left if you added it specifically to .input in earlier styles */
+  .input {
+    white-space: pre-wrap;
+  }
+
+</style>
+</head>
+<body>
+  <div class="terminal">
+    <div class="terminal-header">
+      <span class="dot red-dot"></span>
+      <span class="dot yellow-dot"></span>
+      <span class="dot green-dot"></span>
+    </div>
+    <div class="terminal-body"> <br>
+      <div class="prompt">Eddie Berman / Northeastern Courses <a href="index.html" style="color: #33ff33;">   (Back)</a><br> <br>
+
+<div class="prompt">&gt; Phys 7301 Classical Mechanics/Math Methods</div> 
+<div class="prompt">&gt; Math 7234 Optimization and Complexity</div> 
+<div class="prompt">&gt; Math 7223 Riemannian Optimization</div> 
+<div class="prompt">&gt; Math 5131 Introduction to Mathematical Methods and Modeling</div>  
+<div class="prompt">&gt; Phys 5118 General Relativity and Cosmology</div> 
+<div class="prompt">&gt; Math 4991 Research Independent Study (Machine Learning PDE Discovery)</div> 
+<div class="prompt">&gt; Math 4571 Advanced Linear Algebra</div> 
+<div class="prompt">&gt; Phys 4606 Mathematical and Computational Methods for Physics</div> 
+<div class="prompt">&gt; Math 4555 Complex Variables</div> 
+<div class="prompt">&gt; Math 4545 Fourier Series and PDEs</div> 
+<div class="prompt">&gt; Phys 4305 Thermodynamics and Statistical Mechanics</div> 
+<div class="prompt">&gt; Phys 4115 Quantum Mechanics</div>  
+<div class="prompt">&gt; Phys 3601 Electricity and Magnetism 1</div>  
+<div class="prompt">&gt; Engw 3307 Advanced Writing in the Sciences</div>  
+<div class="prompt">&gt; Math 3275 Advanced Group Theory</div> 
+<div class="prompt">&gt; Math 3181 Advanced Probability and Statistics</div> 
+<div class="prompt">&gt; Math 3150 Real Analysis</div> 
+<div class="prompt">&gt; Pols 2358 Current Issues in Cities and Suburbs</div> 
+<div class="prompt">&gt; Math 2321 Calculus 3 For Science and Engineering</div> 
+<div class="prompt">&gt; Phys 2303 Modern Physics</div> 
+<div class="prompt">&gt; CS   1800 Discrete Structures</div> 
+<div class="prompt">&gt; ENVR 1500 Introduction to Environmental, Social, and Biological Data</div> 
+
+
+      </div>
+    </div>
+  </div>
+<script>
+        document.getElementById("showAsciiBtn").onclick = function() {
+            var asciiArt = document.getElementById("asciiArt");
+            asciiArt.style.display = asciiArt.style.display === "none" ? "block" : "none";
+        };
+    </script>
+</body>
+</html>
+

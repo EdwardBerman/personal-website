@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+    <head>
+        
+<meta name="viewport" content= "width=device-width, initial-scale=1.0">
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"> 
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+<link rel="stylesheet" type="text/css" href="styles/styles.css">
+<title>Edward Berman - NEU</title>
+<link rel="icon" href="assets/icon.ico" />
+
+    </head>
+    <style>
+@import url("https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@0,400;0,600;1,400;1,600&family=Roboto:ital,wght@0,400;0,500;1,400;1,500&display=swap");
+.container {
+  margin-top: 50px;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  margin: 50px auto;
+  width: 60%;
+}
+
+.row {
+  margin-bottom: 10px;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Crimson Text", serif;
+  margin-block-start: 0px;
+  margin-block-end: 10px;
+}
+
+a, a:visited {
+  color: #68a1d3;
+  font-weight: 400;
+  text-decoration: none;
+}
+a:hover, a:visited:hover {
+  color: #2E5475;
+  text-decoration: none;
+}
+a:clicked, a:visited:clicked {
+  color: #2E5475;
+}
+
+em {
+  font-weight: 600;
+}
+
+.inset {
+  width: 95%;
+  margin: auto 2.5%;
+  font-size: 16px;
+}
+
+.feat {
+  text-decoration: underline;
+}
+
+.pagenav-link {
+  color: black;
+  display: inline;
+  text-decoration: none;
+  font-style: italic;
+  font-weight: 400;
+}
+.pagenav-link:visited {
+  text-decoration: none;
+  color: black;
+}
+.pagenav-link:hover {
+  text-decoration: none;
+  color: black;
+}
+.pagenav-link:hover {
+  text-decoration: none;
+  color: #68a1d3;
+}
+
+/*# sourceMappingURL=styles.css.map */
+    </style>
+    <body>
+        <h1 id="about">Edward Berman</h1>
+        <div class="row">
+            <div class="pagenav col">
+                <p>
+                    <a class="pagenav-link" href="/pro#about">About</a> • <a class="pagenav-link" href="/pro#work">Publications</a> • <a class="pagenav-link" href="Berman_Edward_CV_Website.pdf">Full CV</a>
+                </p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-7 col-xs-12 my-md-1 my-2" id="about">
+              <p>I'm an undergraduate at Northeastern University double-majoring in Mathematics and Applied Physics. I'm interested in building differentiable software for Cosmology. My work is somewhere in the intersection of instrumentation and numeric methods. I am very active in the <a href="https://julialang.org/">Julia</a> community and I also dabble with Large Language Models from time to time. I'm grateful to have worked in <a href="https://github.com/mcclearyj">Jacqueline McCleary's</a> group at Northeastern University for the last several years and to be a part of <a href="https://cosmos.astro.caltech.edu/">COSMOS-Web: The James Webb Space Telescope Cosmic Origins Survey</a>. 
+              </p>
+            </div>
+            <div class="offset-md-1 col-md-4 col-xs-12 my-md-1 my-2">
+                <img src="newHeadshotMain.jpg" width="150px" />
+            </div>
+        </div>
+        <hr />
+        <div class="row">
+            <div class="col-12">
+                <b>Contact Me</b>
+                <p>Please reach out by email: berman (dot) ed (at) northeastern (dot) edu <br />
+                    Alternatively, on social media: <a href="https://www.linkedin.com/in/edward-berman-324a86226/">LinkedIn</a>, and <a href="https://github.com/EdwardBerman">GitHub</a>.</p>
+            </div>
+        </div>
+
+        <h2 id="work">Research</h2>
+        <p><i>* indicates equal contribution.</i></p>
+        <div class="row">
+            <div class="col-12">
+                <a href="https://arxiv.org/abs/2401.11625">Efficient PSF Modeling with ShOpt.jl: A PSF Benchmarking Study with JWST NIRCam Imaging</a>
+                <div class="inset">
+                  <p><span class="feat">Edward Berman</span>, Jacqueline McCleary, Anton M. Koekemoer, Maximilien Franco, Nicole E. Drakos, Daizhong Liu, James W. Nightingale, Marko Shuntov, Diana Scognamiglio, Richard Massey, Guillaume Mahler, Henry Joy McCracken, Brant E. Robertson, Andreas L. Faisst, Caitlin M. Casey, Jeyhan S. Kartaltepe. <span class="feat">In submission to the Astronomical Journal</span>.</p> 
+                  <p>We propose new methods for empirical point spread function characterizationand implement them in Julia. We benchmark our PSF fitter against PIFF and PSFex and show that our approach bridges the accuracy and features of PIFF with the speed of PSFex. </p>
+                </div>
+                <a href="https://arxiv.org/abs/2310.00071">ShOpt.jl : A Julia Package for Empirical Point Spread Function Characterization of JWST NIRCam Data</a>
+                <div class="inset">
+                  <p><span class="feat">Edward Berman</span>, Jacqueline McCleary. <span class="feat">In submission to the Journal of Open Source Software, AAS Companion Paper</span>.</p>
+                  <!--<p>Federico Cassano, Luisa Li, Akul Sethi, Noah Shinn, Abby Brennan-Jones, <span class="feat">Jacob Ginesin</span>, Edward Berman, George Chakhnashvili, Anton Lozhkov, Carolyn Jane Anderson, Arjun Guha. <span class="feat">In submission to the Conference on Language Modeling, 2024</span>.</p>-->
+                  <p>Companion paper to the full AAS submission, details some of the more intricate software decisions made in developing our PSF fitter ShOpt.jl. </p>
+                </div>
+                <a href="https://arxiv.org/abs/2312.12450">Can It Edit? Evaluating the Ability of Large Language Models to Follow Code Editing Instructions”</a>
+                <div class="inset">
+                  <p>Federico Cassano, Luisa Li, Akul Sethi, Noah Shinn, Abby Brennan-Jones, Jacob Ginesin, <span class="feat">Edward Berman</span>, George Chakhnashvili, Anton Lozhkov, Carolyn Jane Anderson, Arjun Guha. <span class="feat">In submission to the first annual Conference on Language Modeling, 2024</span>.</p>
+                  <p>We develop benchmarks to evaluate large language models on code editing performance, as previous benchmarks proved insufficient. We also fine-tune models for specifically code editing.</p>
+                </div>
+                
+                <a href="https://arxiv.org/abs/2303.11366">Reflexion: Language Agents with Verbal Reinforcement Learning</a>
+                <div class="inset">
+                  <p>Noah Shinn, Federico Cassano, <span class="feat">Edward Berman</span>, Ashwin Gopinath, Karthik Narasimhan, Shunyu Yao. arXiv preprint.</p> 
+                  <p>
+                    We show that giving Large Language Models an Episodic memory buffer results in state of the art performance on a wide variety of benchmarks, including HumanEval, Alfworld, and HotpotQA.  
+                  </p>
+                </div>
+            </div>
+        </div>
+
+         </div>
+    </body>
+    
+<script src="https://code.jquery.com/jquery-3.5.1.min.js"
+  integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0="
+  crossorigin="anonymous"></script>
+
+</html>

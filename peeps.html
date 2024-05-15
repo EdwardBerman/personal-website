@@ -40,13 +40,15 @@
   }
 
   .terminal {
-    background-color: rgba(13, 13, 13, 0.9);
+    background-color: rgba(13, 13, 13, 0.97);
     /*background-color: #0d0d0d;*/
     border-radius: 5px;
     padding: 20px;
     box-shadow: 0 0 10px rgba(0, 255, 0, 0.5);
     width: 80%; /* Adjust the width as per your requirement */
     max-width: 1000px; /* Optional: if you want to limit the maximum width */
+    max-height: 90vh; /* Prevent terminal from exceeding viewport height */
+    overflow: auto; /* Enable scrolling within terminal */
   }
 
   .terminal-header {
@@ -112,12 +114,12 @@
 </head>
 <body>
   <div class="terminal">
-    <div class="terminal-header">
+    <!--<div class="terminal-header">
       <span class="dot red-dot"></span>
       <span class="dot yellow-dot"></span>
-      <span class="dot green-dot"></span>
-    </div>
-    <div class="terminal-body"> <br>
+      <span class="dot green-dot"></span>-
+    </div>-->
+    <div class="terminal-body"> 
       <div class="prompt">Eddie Berman / A List of People I Know <a href="index.html" style="color: #33ff33;">   (Back)</a><br> <br>
 
         <div class="prompt">&gt; <a href="https://priime.dev/about" style="color: #33ff33;" target="_blank">Lucus</a> </div> 

@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Bermanator</title>
+<style>
+#showAsciiBtn {
+            background: none;
+            border: none;
+            color: lightgreen;
+            line-height: 1.5;
+            font-size: 16px; /* Set the font size */
+            /*text-decoration: underline;*/
+            cursor: pointer;
+            padding: 0;
+            font-family: monospace;
+        }
+  #asciiArt {
+            display: none;
+            white-space: pre;
+            font-family: monospace;
+        }
+  body {
+    background-image: url('alt_astro_out.png');
+    background-size: cover; /* Cover the entire window */
+    background-position: center center; /* Center the image in the window */
+    background-attachment: fixed;
+    
+    background-color: #0a0a0a;
+    font-family: 'Courier New', Courier, monospace;
+    color: #ff3333;
+    margin: 0;
+    line-height: 1.5; /* Increase the line-height for more space between lines */
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+
+  .terminal {
+    background-color: rgba(13, 13, 13, 0.97);
+    /*background-color: #0d0d0d;*/
+    border-radius: 5px;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(255, 51, 51, 0.5);
+    width: 80%; /* Adjust the width as per your requirement */
+    max-width: 1000px; /* Optional: if you want to limit the maximum width */
+    max-height: 90vh; /* Prevent terminal from exceeding viewport height */
+    overflow: auto; /* Enable scrolling within terminal */
+  }
+
+  .terminal-header {
+    color: #fff;
+    background-color: #333;
+    padding: 2px 10px;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+  }
+
+  .dot {
+    height: 15px;
+    width: 15px;
+    background-color: #f1c40f;
+    border-radius: 50%;
+    display: inline-block;
+    margin-right: 5px;
+  }
+
+  .green-dot {
+    background-color: #2ecc71;
+  }
+
+  .red-dot {
+    background-color: #e74c3c;
+  }
+
+/*
+  .terminal-body {
+    white-space: pre-wrap;
+    overflow-x: auto;
+  }
+
+  .prompt {
+    margin-bottom: 5px;
+  }
+
+  .input {
+    white-space: pre-wrap;
+    display: inline;
+  }
+  */ 
+  .prompt, .input {
+    margin: 0; /* Removes any default margins */
+    padding: 0; /* Removes any default padding */
+    display: block; /* Ensures the element is a block-level element */
+  }
+
+  .terminal-body {
+    padding-left: 20px; /* This padding will align the text with the prompt if necessary */
+    padding-right: 20px; /* Padding to prevent text from touching the right edge */
+  }
+
+  /* Remove padding-left if you added it specifically to .input in earlier styles */
+  .input {
+    white-space: pre-wrap;
+  }
+
+</style>
+</head>
+<body>
+  <div class="terminal">
+    <!--<div class="terminal-header">
+      <span class="dot red-dot"></span>
+      <span class="dot yellow-dot"></span>
+         (Back)<a href="publications.html" style="color: #ff3333;">   (Back)</a><
+      <span class="dot green-dot"></span>-
+    </div>-->
+    <div class="terminal-body"> 
+ <div class="prompt">$ Eddie Berman / Publications / Berman et al. (4) <a href="publications.html" style="color: #ff3333;">   (Back)</a></div>
+      <p><b>Traditionally in the weak gravitational lensing literature, 2-point correlations of galaxy properties are studied in terms of their dependence on spatial separations. The values of these 2-point correlation functions also carry a dependence on underlying cosmology. Motivated by the desire to study the dependence of correlation functions on cosmological parameters, we introduce an algorithm for estimating correlations that is automatically differentiable by design. Automatic differentiation allows us to quantify the relationship between a correlation and a cosmology through studying the derivatives of the correlation function with respect to each of the input parameters in the model. The widely adopted KD-Tree and k means approaches usually use the argmin and median functions to cluster objects. These functions are either non-differentiable or result in a derivative of 0, losing the information we wish to study. In contrast, our approach uses fuzzy c means to cluster objects into representative groups, keeping computational expediency without losing differentiability. We test our algorithm by time evolving galaxies randomly distributed in a gravitational field until some stopping time Tmax and then running our algorithm on the resulting catalog. We then take the derivative of our correlation function with respect to various values of the gravitational constant G. This proof of concept shows the efficacy of our algorithm for studying the dependencies of correlation functions on cosmology.</b>
+    </div>
+<a href="ascii-art.txt"></a>
+     </div>
+      </div>
+    </div>
+  </div>
+<script>
+        document.getElementById("showAsciiBtn").onclick = function() {
+            var asciiArt = document.getElementById("asciiArt");
+            asciiArt.style.display = asciiArt.style.display === "none" ? "block" : "none";
+        };
+    </script>
+</body>
+</html>
+

@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Bermanator</title>
+<style>
+#showAsciiBtn {
+            background: none;
+            border: none;
+            color: lightgreen;
+            line-height: 1.5;
+            font-size: 16px; /* Set the font size */
+            /*text-decoration: underline;*/
+            cursor: pointer;
+            padding: 0;
+            font-family: monospace;
+        }
+  #asciiArt {
+            display: none;
+            white-space: pre;
+            font-family: monospace;
+        }
+  body {
+    background-image: url('../alt_astro_out.png');
+    background-size: cover; /* Cover the entire window */
+    background-position: center center; /* Center the image in the window */
+    background-attachment: fixed;
+    
+    background-color: #0a0a0a;
+    font-family: 'Courier New', Courier, monospace;
+    color: #ff3333;
+    margin: 0;
+    line-height: 1.5; /* Increase the line-height for more space between lines */
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+
+  .terminal {
+    background-color: rgba(13, 13, 13, 0.97);
+    /*background-color: #0d0d0d;*/
+    border-radius: 5px;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(255, 51, 51, 0.5);
+    width: 80%; /* Adjust the width as per your requirement */
+    max-width: 1000px; /* Optional: if you want to limit the maximum width */
+    max-height: 90vh; /* Prevent terminal from exceeding viewport height */
+    overflow: auto; /* Enable scrolling within terminal */
+  }
+
+  .terminal-header {
+    color: #fff;
+    background-color: #333;
+    padding: 2px 10px;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+  }
+
+  .dot {
+    height: 15px;
+    width: 15px;
+    background-color: #f1c40f;
+    border-radius: 50%;
+    display: inline-block;
+    margin-right: 5px;
+  }
+
+  .green-dot {
+    background-color: #2ecc71;
+  }
+
+  .red-dot {
+    background-color: #e74c3c;
+  }
+
+/*
+  .terminal-body {
+    white-space: pre-wrap;
+    overflow-x: auto;
+  }
+
+  .prompt {
+    margin-bottom: 5px;
+  }
+
+  .input {
+    white-space: pre-wrap;
+    display: inline;
+  }
+  */ 
+  .prompt, .input {
+    margin: 0; /* Removes any default margins */
+    padding: 0; /* Removes any default padding */
+    display: block; /* Ensures the element is a block-level element */
+  }
+
+  .terminal-body {
+    padding-left: 20px; /* This padding will align the text with the prompt if necessary */
+    padding-right: 20px; /* Padding to prevent text from touching the right edge */
+  }
+
+  /* Remove padding-left if you added it specifically to .input in earlier styles */
+  .input {
+    white-space: pre-wrap;
+  }
+
+</style>
+</head>
+<body>
+  <div class="terminal">
+    <!--<div class="terminal-header">
+      <span class="dot red-dot"></span>
+      <span class="dot yellow-dot"></span>
+         (Back)<a href="publications.html" style="color: #ff3333;">   (Back)</a><
+      <span class="dot green-dot"></span>-
+    </div>-->
+    <div class="terminal-body"> 
+ <div class="prompt">$ Eddie Berman / Blog / The State of the Bermanator (0) <a href="../blogs.html" style="color: #ff3333;">   (Back)</a></div>
+ <p><b> Welcome to the State of the Bermanator. This is take n > 3 at starting a blog. My brief foray into music reviews and class projects recycled into long form discussions were fun, but I hope this iteration of THE STATE OF THE BERMANATOR is more fun, personal, and widely palatable. <br> <br> 
+   So, what is the current state of the Bermanator? <br> <br> 
+   Right now, I am in the process of getting my ducks in a row for summer and ultimately PhD programs. Hopefully they exist next year (written 05/05/2025 for context). I'm not going to bore the internet with details on those applications until after they're all sent in, I'd rather discuss my career ambitions themselves, and reflect on how I got here. <br> <br> 
+   My immediate goal is to provide insights on the Biomarkers retrieval problem during my visiting stint at the Center for Astrophysics Harvard and Smithsonian. I spent a large portion of my fall and spring thinking about how to add uncertainty estimates into an emulator for chemical spectra. These uncertainty estimates are necessary if you want to solve the retrieval problem, which asks, given an observed spectra, what are the like chemical abundances that produced it? This is often studied in the context of Biomarkers, where exoplaneteers look for signs of life such as Carbon on other planets. I don't want to say too much as I have a couple papers in preparation that I don't want to spoil, but be on the lookout for some goodies :).<br> <br>
+
+   So yeah, this is quite exciting. Every day I wake up, I bike down my Wizzard of Oz esk Yellow Brick Road (the green bike lane on Mass. Ave), and I go to my job where I look for aliens all day. Pretty f-ing sweet :D. <br><br>
+
+   I also have a project led by my colleague and friend <a href="https://www.luisali.com/" target="_blank" style="color: #ff3333;">Luisa</a> related to GNNs using atomic data, but I'll let her fill you in on the details at a later time. <br> <br>
+
+   Big picture, I think this atomic architecture stuff is really fun, I can see myself spending my career doing research in it. As a researcher I've carved out a niche studying optimization problems with geometric constraints, and I've often wondered what the best way to apply my skills are. Robotics is certainly tempting, it feels like since we've solved many of the difficult problems with language modeling, embedding these "brains" and getting them to interface with Physical movements is the next big step towards general intelligences. That being said. I just can't help but return to atomic data, it speaks to the primal pit in my brain that drove me to study physics in the first place. If I play my cards right, I bet I could carve out an entire PhD thesis related to atomic architecture and theory for this Biomarkers retrieval problem. <br> <br>
+
+   Oh, and how did I get here? That is a bit of a loaded question. Basically, I started in Astrophysics because I thought it had interesting statistics, and that is really it (and I still believe this, and I continue to do Astrophysics for this reason). My first project had to deal with something called Point-spread Function (PSF) modeling. Basically, telescopes can be a tad blurry due to atmospheric and instrumental affects, and we want to correct for this. Anyway, solving for PSF variations across the field of view of the sky had some fun geometric constraints, something something I fell down a pipeline of inductive biases, and here we are, that is all she wrote. <br> <br>
+
+   So yeah, that is rendition zero of THE STATE OF THE BERMANATOR. If you want to talk further, feel free to send me a message. Please also bring me an orange :)
+
+
+ </b>
+    </div>
+<a href="ascii-art.txt"></a>
+     </div>
+      </div>
+    </div>
+  </div>
+<script>
+        document.getElementById("showAsciiBtn").onclick = function() {
+            var asciiArt = document.getElementById("asciiArt");
+            asciiArt.style.display = asciiArt.style.display === "none" ? "block" : "none";
+        };
+    </script>
+</body>
+</html>
+

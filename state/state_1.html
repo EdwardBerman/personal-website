@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Bermanator</title>
+<style>
+#showAsciiBtn {
+            background: none;
+            border: none;
+            color: lightgreen;
+            line-height: 1.5;
+            font-size: 16px; /* Set the font size */
+            /*text-decoration: underline;*/
+            cursor: pointer;
+            padding: 0;
+            font-family: monospace;
+        }
+  #asciiArt {
+            display: none;
+            white-space: pre;
+            font-family: monospace;
+        }
+  body {
+    background-image: url('../alt_astro_out.png');
+    background-size: cover; /* Cover the entire window */
+    background-position: center center; /* Center the image in the window */
+    background-attachment: fixed;
+    
+    background-color: #0a0a0a;
+    font-family: 'Courier New', Courier, monospace;
+    color: #ff3333;
+    margin: 0;
+    line-height: 1.5; /* Increase the line-height for more space between lines */
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+
+  .terminal {
+    background-color: rgba(13, 13, 13, 0.97);
+    /*background-color: #0d0d0d;*/
+    border-radius: 5px;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(255, 51, 51, 0.5);
+    width: 80%; /* Adjust the width as per your requirement */
+    max-width: 1000px; /* Optional: if you want to limit the maximum width */
+    max-height: 90vh; /* Prevent terminal from exceeding viewport height */
+    overflow: auto; /* Enable scrolling within terminal */
+  }
+
+  .terminal-header {
+    color: #fff;
+    background-color: #333;
+    padding: 2px 10px;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+  }
+
+  .dot {
+    height: 15px;
+    width: 15px;
+    background-color: #f1c40f;
+    border-radius: 50%;
+    display: inline-block;
+    margin-right: 5px;
+  }
+
+  .green-dot {
+    background-color: #2ecc71;
+  }
+
+  .red-dot {
+    background-color: #e74c3c;
+  }
+
+/*
+  .terminal-body {
+    white-space: pre-wrap;
+    overflow-x: auto;
+  }
+
+  .prompt {
+    margin-bottom: 5px;
+  }
+
+  .input {
+    white-space: pre-wrap;
+    display: inline;
+  }
+  */ 
+  .prompt, .input {
+    margin: 0; /* Removes any default margins */
+    padding: 0; /* Removes any default padding */
+    display: block; /* Ensures the element is a block-level element */
+  }
+
+  .terminal-body {
+    padding-left: 20px; /* This padding will align the text with the prompt if necessary */
+    padding-right: 20px; /* Padding to prevent text from touching the right edge */
+  }
+
+  /* Remove padding-left if you added it specifically to .input in earlier styles */
+  .input {
+    white-space: pre-wrap;
+  }
+
+</style>
+</head>
+<body>
+  <div class="terminal">
+    <!--<div class="terminal-header">
+      <span class="dot red-dot"></span>
+      <span class="dot yellow-dot"></span>
+         (Back)<a href="publications.html" style="color: #ff3333;">   (Back)</a><
+      <span class="dot green-dot"></span>-
+    </div>-->
+    <div class="terminal-body"> 
+      <div class="prompt"><b>$ Eddie Berman / Blog / The State of the Bermanator (1) <a href="../blogs.html" style="color: #ff3333;">   (Back)</a></b></div>
+      <p><b> <i>Groans</i>. Deciding where to publish sure is a fucking pain.<br> <br> 
+        It involves a couple things. A critical evaluation of the quality of one's own work, a cohesive story to match the desired venue, an alignment with ones own morals, an understanding of the well respected destinations, and potentially thousands of dollars in publication fees.
+        <br> <br>
+        I think also, as someone who has spent equal time in both Physics and Computer Science, I can offer somewhat of a less heard perspective. So here are some ramblings on Bermanator's experiences and lessons learned. Spoiler alert: This will culminate in the conclusion that TMLR deserves a ton more respect and does probably the most right.
+        <br> <br>
+        Learning about the conference proceedings system that Computer Science tends to use was surprising coming from Physics (specifically Astronomy and Astrophysics). In Astronomy and Astrophysics, the only real "premier" venue, better than all the rest, is <i>Nature</i>. That is, at least until recently. With <i>Nature's</i> emphasis on impact, its failure to ensure replicability has bit the journal in the ass a couple times. I've seen my colleagues lose interest in the journal because of it. Consequently, most of my colleagues submit to subject specific journals like <i>The AAS Journals, Physical Review D, Journal of Cosmology and Astroparticle Physics (American journals), The Monthly Notices of Astronomy and Astrophysics, Astronomy and Astrophysics (European journals)</i>. **
+        
+        I submitted my first big journal paper to <i>The Astronomical Journal</i>. I got a very detailed review, which helped the paper significantly when it was finally accepted for publication. There was one thing though, that shocked me to my naive core when my advisor told me so. The publication cost of a prestigious journal, often compounding with each page and each figure, left us with a $5k bill. Well, I obviously didn't personally pay, but it was still shocking to learn that this was a price regularly paid by the best academics.
+        <br> <br>
+        So, my next paper came around, and the decision time came back again. I was a bit more mature of an academic at the time, and my advisor left it up to me to decide where to submit. I proudly chose the <i>Open Journal of Astrophysics (OjA)</i>. I felt like it was gaining traction within the community, so prestige wouldn't be an issue, or at least I was investing in the future in some way. I also think that the idea of an arxiv journal is quite elegant. I admit that I am biassed by my experiences dealing with the fucking nightmare of the AAS tex compiler. Also, the journal (obviously, if everything is on arxiv), is free for public access and also free to submit to. While it may have been a bit risky to submit to OjA instead of a more established venue while I am still early career, I didn't feel like it would make a huge difference. I was reassured by one of my colleagues, a Professor at Northeastern, who mentioned that he had submitted many of his PhD papers to <i>The Journal of Cosmology and Astroparticles Physics</i>. At the time it was a gamble, but he had faith in the journal and it paid off later in his career as <i>(JCAP)</i> is now a well respected venue. I have yet to receive reviews from OjA... but I will report back soon o7.
+
+<br> <br>
+
+It was around this time that I started getting deeper into some of my more ML focused work. There are some things right off the bat that I preferred about the conference system.
+
+<ol>
+  <li>There is a physical conference to present the work. I like travel! I like meeting people! I like being around nerds!</li>
+  <li>Conferences give awards, which help early career researchers. Journals have "cover articles," but I wouldn't say it is as prevelant as oral spotlights and the like at conferences</li>
+  <li>These conferences often have workshops, which highlight in progress work and give an oppurtunity to publish partial results. I like this because it enables me to publish something while I am actively working on improving the product for a conference or journal submission</li>
+  <li>No publication charges, small charge to attend conference and of course travel expenses.***</li>
+</ol>
+
+The issue with conferences are the propensity for shitty reviews. The reviewers are oversubscribed and the conference has to make some arbitrary choices based on perceived impact due to limited space. And if your paper gets rejected? Better luck next year, or at least until the next major conference.
+
+This is where my favorite <i>Transactions on Machine Learning (TMLR)</i> venue comes into play. TMLR has
+
+<ol>
+  <li>A review system based on good science and reproducability above impact</li>
+  <li>Awards for high quality papers</li>
+  <li>Rolling deadline (and a fairly quick turnaround time)</li>
+  <li>No publication charges</li>
+  <li>Partnership with ICLR to invite some authors to present their work</li>
+</ol>
+
+The inability to present all the time is the main drawback for me, but you can always present an extended abstract at a workshop. For example, I first sent my "On Uncertainty Calibration for Equivariant Functions" paper to a workshop at RSS, and I plan on submitting the full product to TMLR, and potetially later an extended abstract at <i>NeurReps</i> workshop.
+
+        <br> <br>
+
+        Some final notes. I also really like the <i>AAS/Journal of Open Source Software</i> companion system, which encourages Astro peeps to have their software reproduced and tested and just overall high quality by publishing companion papers in both a AAS journal and <i>JOSS</i>. (I'm also a proud <i>JOSS</i> reviewer B) ). I also think know that submitting to <i>TMLR</i> instead of <i>NeurIPS</i> (I finished my draft before early May) probably would have been better for my career. Accordingly, I try to judge work based on its content and not the venue, though I know snap judgements are necessary to get through a mountain of applications when hiring... To appease the fans, here is my informal ML venue tier list (not biased at all whatsoever nope not even a little bit no review prejudices here or hints at the kinds of things Bermanator finds interesting):
+
+<ol>
+  <li>TMLR</li>
+  <li>AISTATS</li>
+  <li>NeurReps Workshop (PMLR Proceedings Track)****</li>
+  <li>COLT</li>
+  <li>CVPR/ICCV/ECCV</li>
+  <li>Siggraph</li>
+  <li>ICRA/CoRL/IJRR/RSS/R-AL/you get the idea with this tier lol</li>
+  <li>Learning on Graphs</li>
+  <li>ML4PS Workshop</li>
+  <li>...</li>
+  <li>[Major Dropoff Numero Uno]</li>
+  <li>...</li>
+  <li>NeurIPS/ICML/ICLR</li>
+  <li>...</li>
+  <li>[Major Dropoff Numero Dos]</li>
+  <li>COLM/EMNLP/etc.</li>
+</ol>
+        <br> <br>
+
+        ** There are also well respected journals that target Asian and Australian Instutitions, I just happen to know these less well.
+
+        <br> <br>
+
+        *** Aside, fuck conferences that mandate attendance to publish in the proceedings. This fucks over early career researchers who are less likely to be able to attend or international researchers who may have to fight visa issues
+
+        <br> <br>
+
+        **** There's an ICML workshop with similar flavor that I haven't checked out in major detail, GRaMs
+
+        <br> <br>
+
+   So yeah, that is rendition one of THE STATE OF THE BERMANATOR. If you want to talk further, feel free to send me a message. Please also bring me an orange :)
+
+
+ </b>
+    </div>
+<a href="ascii-art.txt"></a>
+     </div>
+      </div>
+    </div>
+  </div>
+<script>
+        document.getElementById("showAsciiBtn").onclick = function() {
+            var asciiArt = document.getElementById("asciiArt");
+            asciiArt.style.display = asciiArt.style.display === "none" ? "block" : "none";
+        };
+    </script>
+</body>
+</html>
+

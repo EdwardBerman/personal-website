@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Bermanator</title>
+<style>
+#showAsciiBtn {
+            background: none;
+            border: none;
+            color: lightgreen;
+            line-height: 1.5;
+            font-size: 16px; /* Set the font size */
+            /*text-decoration: underline;*/
+            cursor: pointer;
+            padding: 0;
+            font-family: monospace;
+        }
+  #asciiArt {
+            display: none;
+            white-space: pre;
+            font-family: monospace;
+        }
+  body {
+    background-image: url('../robo.png');
+    background-size: contain;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+
+    /*background-image: url('alt_astro_out.png');
+    font-size: 20px; /* Adjust this to your preferred size */
+    /*background-size: cover; /* Cover the entire window */
+    /*background-position: center center; /* Center the image in the window */
+    /*background-attachment: fixed;*/
+    
+    background-color: #0a0a0a;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: bold; /* Make the font bolder */
+    color: #ff3333;
+    margin: 0;
+    line-height: 1.5; /* Increase the line-height for more space between lines */
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+
+  .terminal {
+    background-color: rgba(13, 13, 13, 0.97);
+    /*background-color: #0d0d0d;*/
+    border-radius: 5px;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(255, 51, 51, 0.5);
+    width: 80%; /* Adjust the width as per your requirement */
+    max-width: 1000px; /* Optional: if you want to limit the maximum width */
+    max-height: 90vh; /* Prevent terminal from exceeding viewport height */
+    overflow: auto; /* Enable scrolling within terminal */
+  }
+
+  .terminal-header {
+    color: #fff;
+    background-color: #333;
+    padding: 2px 10px;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+  }
+
+  .dot {
+    height: 15px;
+    width: 15px;
+    background-color: #f1c40f;
+    border-radius: 50%;
+    display: inline-block;
+    margin-right: 5px;
+  }
+
+  .green-dot {
+    background-color: #2ecc71;
+  }
+
+  .red-dot {
+    background-color: #e74c3c;
+  }
+
+/*
+  .terminal-body {
+    white-space: pre-wrap;
+    overflow-x: auto;
+  }
+
+  .prompt {
+    margin-bottom: 5px;
+  }
+
+  .input {
+    white-space: pre-wrap;
+    display: inline;
+  }
+  */ 
+  .prompt, .input {
+    margin: 0; /* Removes any default margins */
+    padding: 0; /* Removes any default padding */
+    display: block; /* Ensures the element is a block-level element */
+  }
+
+  .terminal-body {
+    padding-left: 20px; /* This padding will align the text with the prompt if necessary */
+    padding-right: 20px; /* Padding to prevent text from touching the right edge */
+  }
+
+  /* Remove padding-left if you added it specifically to .input in earlier styles */
+  .input {
+    white-space: pre-wrap;
+  }
+
+</style>
+</head>
+<body>
+  <div class="terminal">
+    <div class="terminal-body"> 
+      <div class="prompt">$ Eddie Berman / Diary / Three <a href="../diary.html" style="color: #ff3333;">   (Back)</a></div><br>
+      <div class="prompt">Entry 3 | 07/23/26 | Fields Medalists<br> <br>
+
+        <div class="prompt">Finally, some news that is so human and so far removed from AI that it warms the cockles of my heart. The bittersweet success of AI in solving longstanding conjectures is a blog for another day. Right now. I want to talk about the inspiration I got watching the Simons Foundation small documenaty videos on this years fields medalists. You can find these videos here: <br><br>
+          <li><a href="https://www.youtube.com/watch?v=mTPyjR3qmTA" target="_blank" style="color: #ff3333;">Hong Wang</a></li>
+          <li><a href="https://www.youtube.com/watch?v=ERemSkQtoDk" target="_blank" style="color: #ff3333;">Yu Deng</a></li>
+          <li><a href="https://www.youtube.com/watch?v=E4KP07YL0Js" target="_blank" style="color: #ff3333;">John Pardon</a></li>
+          <li><a href="https://www.youtube.com/watch?v=TAh5tZ8QAzQ" target="_blank" style="color: #ff3333;">Jacob Tsimerman</a></li>
+           <br> <hr style="height: 5px; background-color: red; border: none;">
+          I want to start with Hong Wang, whose story is perhaps most inspiring to an aspiring mathematician struggling to find their confidence. Now, I don't want to be misleading here. I don't want to perpetuate a similar myth to "Einstein failed math!" (which was never true) or anything like that. At a glance of her wikipedia page, you see a gifted and determined student who earned early admission to arguably China's top university after attaining an extremly high score on the entrance exams. She went on to study at MIT, did a stint at the Institute of Advanced Study, and obtained a professorship at a top mathematics university. Again, at a glance, it seems like a journey with very little adversity. But of course, the real world isn't like that, and her feature on the Simmons documentary tells a more nuanced story. Despite being interested in math from a young age, she had many other interests which she explored. For example, she started college as an earth sciences major before switching into math. She is quoted as saying that mathematics started to become much more difficult when she started college and required much more effort and discipline and furthermore that she was discouraged by this. She flirted with other careers, but after an internship in architecture she decided she would give herself 5 years of runway to persue mathematics. She would reevaluate her career in 5 years if things didn't work out (and well... you know the rest. This is a blog about fields medalists!) The key was, she explains, that she stopped worrying if she was good at math or not, and just gave things a shot.<br><br>
+          As a first year PhD student, seeing all the successful graduates and brilliant professors, its hard not to at least feel a little bit overwhelmed and question my own abilities as a researcher. But its videos like these that remind me, I really just don't care. I don't care if I'm naturally good at math, if every idea I have is ingenious or not, frankly if this is even the best for my career. I am doing a PhD because I love math. I love computer science. I love weird geometry and running experiments. And I am trying to get better at all of these things. For now, that is enough :)
+           <br> <hr style="height: 5px; background-color: red; border: none;">
+           Next, Yu Deng. First off, you can see from the items on his desk that he is a weeb. Hell yeah. <br> <br>
+           Of all the field medalists, I think Yu Deng's work is the only one I had heard of before hearing of this years winners, I think through my Uni's math discord server (shoutout!) or maybe just because I love PDEs and through some internet rabbitholes related to my interests I happened upon it. <br><br>
+           Like many mathematicians, Yu is a quiet competitor. A strong Go player and an IMO gold medalist. Yu says that the thing that keeps him in the field is the end result, getting the solution to the problem you are faced with. Interestingly, he says less about the process of solving itself or about the creativity of the solution. I mention this because different people do math for different reasons. In the past I was more obsessed with asthetics and elegance in proofs, but these days both internal and external pressures have made me more impact driven. A good proof is a correct one, after all. An interesting result that is illuminating and opens up oppurtunities for new mathematics is preferred over a less impactful lemma with a "beautiful" proof. Perhaps my mind will waiver again, but for now I guess I'll share the mental note that I've come to share perspectives like Yu's more and more with time.
+           <br> <hr style="height: 5px; background-color: red; border: none;">
+           John Pardon is lucky for being a professor at Stony Brook, where he gets to work in the beautiful Simons Center for Geometry and Physics supported by donations from Jim Simons himself! The docu starts by talking about visualizations. Lately, I've been really intrigued by successful geometers, artists, and other people who are successful in highly "visual" domains and yet do not have a minds eye (the ability to imagine visualizations in your head). It's cool and perplexing all at the same time, but all the power to them! I've actually tried to become less visual with my thinking over time, because despite intuition gains that can come from visualization it can also just as easily lead to logical fallcies built on over simplified mental abstractions (at least for me! your mileage may vary.) <br><br>
+           Unlike Yu, John touches upon the process. He uses the metaphor of climbing a mountain when attempting a ressistant problem, the emotional journey of it all! He says the start of the exploration of a new problem is the most exciting, but I disagree! The most fun part of a project for me is when things all seem to start coming together... The Eureka moment.
+           <br> <hr style="height: 5px; background-color: red; border: none;">
+           Jacob Tsimerman is an amazing character, and I appreciated seeing his many persuits outside of mathematics. These include improv, board games, playing squash, and raising a young family. I have never done improv before, but now I kind of want to try it! As Jacob explains, math is so slow and methodical, and improv forces you to think on your feet and act quickly. <br><br>
+           Like John, Jacob talks about grit. The ability to stay engaged with a hard problem even when it seems impossible. Jacob also did competition math, but as with many competitors he finds more joy in the "Player vs question" angle than the "Player vs Player" angle of things. <br><br>
+           I really never got too far in to contest math. I don't regret it in general, I prioritized research where I was similarly exposed to openended problems and ultimately research is what I want to do for my livelihood. I only really studied consistently for the putnam one time, and proudly I got a question right! While I was never that engaged with the competition circuit, I think there is real value in seriously studying for putnam or IMO or ICPC or something like that. Regardless of the score you get on the actual exam, you learn a lot just by preparing! If I could go back, I would have taken significantly less Physics courses (I don't think the quality of Physics instruction at Northeastern is that good) and filled the time with competition prep. <br><br>
+           Despite the shot I just took at NEU Physics, there were still some gems. Thank you Camille, Jacqueline, and Brent for some great physics classes :).
+         </div>
+
+     </div>
+      </div>
+    </div>
+  </div>
+<script>
+        document.getElementById("showAsciiBtn").onclick = function() {
+            var asciiArt = document.getElementById("asciiArt");
+            asciiArt.style.display = asciiArt.style.display === "none" ? "block" : "none";
+        };
+    </script>
+</body>
+</html>
+

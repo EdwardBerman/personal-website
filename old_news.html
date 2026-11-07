@@ -22,14 +22,18 @@
             font-family: monospace;
         }
   body {
-    background-image: url('JWST.jpeg');
-    background-size: cover; /* Cover the entire window */
-    background-position: center center; /* Center the image in the window */
+    /*background-image: url('alt_astro_out.png');*/
+    background-image: url('son_2.png');
+    background-size: contain;
+    background-position: center center;
+    background-repeat: no-repeat;
     background-attachment: fixed;
     
     background-color: #0a0a0a;
     font-family: 'Courier New', Courier, monospace;
-    color: #33ff33;
+    font-weight: bold; /* Make the font bolder */
+    font-size: 20px; /* Adjust this to your preferred size */
+    color: #3399ff;
     margin: 0;
     line-height: 1.5; /* Increase the line-height for more space between lines */
     padding: 0;
@@ -40,13 +44,15 @@
   }
 
   .terminal {
-    background-color: rgba(13, 13, 13, 0.9);
+    background-color: rgba(13, 13, 13, 0.83);
     /*background-color: #0d0d0d;*/
     border-radius: 5px;
     padding: 20px;
-    box-shadow: 0 0 10px rgba(0, 255, 0, 0.5);
+    box-shadow: 0 0 10px rgba(51, 51, 255, 0.5);
     width: 80%; /* Adjust the width as per your requirement */
     max-width: 1000px; /* Optional: if you want to limit the maximum width */
+    max-height: 90vh; /* Prevent terminal from exceeding viewport height */
+    overflow: auto; /* Enable scrolling within terminal */
   }
 
   .terminal-header {
@@ -118,9 +124,9 @@
       <span class="dot green-dot"></span>
     </div>
     <div class="terminal-body"> <br>
-      <div class="prompt">Eddie Berman / Older News <a href="index.html" style="color: #33ff33;">   (Back)</a><br> <br>
+      <div class="prompt">Eddie Berman / Older News <a href="index.html" style="color: #3399ff;">   (Back)</a><br> <br>
 
-        <div class="prompt">&gt; (01/21/24) ShOpt.jl has been submitted to the astronomical journal! <a href="https://arxiv.org/abs/2401.11625" style="color: #33ff33;" target="_blank">arXiv</a> </div> 
+        <div class="prompt">&gt; (01/21/24) ShOpt.jl has been submitted to the astronomical journal! <a href="https://arxiv.org/abs/2401.11625" style="color: #3399ff;" target="_blank">arXiv</a> </div> 
         <div class="prompt">&gt; (01/10/24) Awarded the PEAK Summit Award ($3,000) </div> 
 
 

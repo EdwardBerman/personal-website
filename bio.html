@@ -22,14 +22,18 @@
             font-family: monospace;
         }
   body {
-    background-image: url('JWST.jpeg');
-    background-size: cover; /* Cover the entire window */
-    background-position: center center; /* Center the image in the window */
+    /*background-image: url('alt_astro_out.png');*/
+    background-image: url('son_2.png');
+    background-size: contain;
+    background-position: center center;
+    background-repeat: no-repeat;
     background-attachment: fixed;
     
     background-color: #0a0a0a;
     font-family: 'Courier New', Courier, monospace;
-    color: #33ff33;
+    font-weight: bold; /* Make the font bolder */
+    font-size: 20px; /* Adjust this to your preferred size */
+    color: #3399ff;
     margin: 0;
     line-height: 1.5; /* Increase the line-height for more space between lines */
     padding: 0;
@@ -40,13 +44,15 @@
   }
 
   .terminal {
-    background-color: rgba(13, 13, 13, 0.9);
+    background-color: rgba(13, 13, 13, 0.83);
     /*background-color: #0d0d0d;*/
     border-radius: 5px;
     padding: 20px;
-    box-shadow: 0 0 10px rgba(0, 255, 0, 0.5);
+    box-shadow: 0 0 10px rgba(51, 51, 255, 0.5);
     width: 80%; /* Adjust the width as per your requirement */
     max-width: 1000px; /* Optional: if you want to limit the maximum width */
+    max-height: 90vh; /* Prevent terminal from exceeding viewport height */
+    overflow: auto; /* Enable scrolling within terminal */
   }
 
   .terminal-header {
@@ -118,15 +124,15 @@
       <span class="dot green-dot"></span>
     </div>
     <div class="terminal-body"> <br>
-      <div class="prompt">Eddie Berman / bio <a href="index.html" style="color: #33ff33;">   (Back)</a><br> <br>
+      <div class="prompt">Eddie Berman / bio <a href="index.html" style="color: #3399ff;">   (Back)</a><br> <br>
 <div class="input"><b>Summary</b></div> 
 <div class="input">Interested in the shape and structure of the data, the presence of constraints in optimization problems, and applications of these ideas in Astronomy. I have additional interests in AI and Programming Languages. Specifically, I'm very invested in the Julia ecosystem, and I've been reading a lot about neural program synthesis tools. </div> 
 
 <br><div class="input"><b>Publications</b></div> 
 
-<div class="prompt">&gt; Edward Berman, et al, “Efficient PSF Modeling with ShOpt.jl: A PSF Benchmarking Study with JWST NIRCam Imaging” : Submitted to the Astronomical Journal (AJ). <a href="https://arxiv.org/abs/2310.00071" target="_blank" style="color: #33ff33;">https://arxiv.org/pdf/2401.11625.pdf</a></div> <br> 
-<div class="prompt">&gt; Edward Berman, Jacqueline McCleary, “ShOpt.jl : A Julia Package for Empirical Point Spread Function Characterization of JWST NIRCam Data” : Submitted to The Journal of Open Source Software (JOSS). <a href="https://arxiv.org/abs/2310.00071" target="_blank" style="color: #33ff33;">https://arxiv.org/abs/2310.00071</a></div> 
-<br><div class="prompt">&gt; Noah Shinn, Federico Cassano, Edward Berman, Ashwin Gopinath, Karthik Narasimhan, Shunyu Yao, “Reflexion: Language Agents with Verbal Reinforcement Learning”: <a href="https://arxiv.org/abs/2303.11366" target="_blank" style="color: #33ff33;">https://arxiv.org/abs/2303.11366</a></div> 
+<div class="prompt">&gt; Edward Berman, et al, “Efficient PSF Modeling with ShOpt.jl: A PSF Benchmarking Study with JWST NIRCam Imaging” : Submitted to the Astronomical Journal (AJ). <a href="https://arxiv.org/abs/2310.00071" target="_blank" style="color: #3399ff;">https://arxiv.org/pdf/2401.11625.pdf</a></div> <br> 
+<div class="prompt">&gt; Edward Berman, Jacqueline McCleary, “ShOpt.jl : A Julia Package for Empirical Point Spread Function Characterization of JWST NIRCam Data” : Submitted to The Journal of Open Source Software (JOSS). <a href="https://arxiv.org/abs/2310.00071" target="_blank" style="color: #3399ff;">https://arxiv.org/abs/2310.00071</a></div> 
+<br><div class="prompt">&gt; Noah Shinn, Federico Cassano, Edward Berman, Ashwin Gopinath, Karthik Narasimhan, Shunyu Yao, “Reflexion: Language Agents with Verbal Reinforcement Learning”: <a href="https://arxiv.org/abs/2303.11366" target="_blank" style="color: #3399ff;">https://arxiv.org/abs/2303.11366</a></div> 
 
 <br><div class="input"><b>Aspiring Carrot Farmer</b> &#x1F955;</div> <br>
 

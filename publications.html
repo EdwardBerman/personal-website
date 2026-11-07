@@ -126,6 +126,34 @@
   
   
 
+  .pub-fig-panel {
+    flex: 0 0 300px;
+    margin-left: 24px;
+    background-color: rgba(13, 13, 13, 0.83);
+    border-radius: 5px;
+    padding: 16px;
+    box-shadow: 0 0 10px rgba(51, 51, 255, 0.5);
+    align-self: center;
+  }
+  .pub-fig-panel img {
+    display: block;
+    width: 100%;
+    height: auto;
+    border-radius: 4px;
+    background: #fff;
+    padding: 4px;
+    box-sizing: border-box;
+    transition: opacity 0.25s ease;
+  }
+  .pub-fig-caption {
+    margin-top: 10px;
+    font-size: 14px;
+    line-height: 1.3;
+  }
+  .pub.active > .pub-text > b:first-child { text-decoration: underline; }
+  @media (max-width: 900px) {
+    .pub-fig-panel { display: none; }
+  }
 </style>
 </head>
 <body>
@@ -139,11 +167,11 @@
     <div class="terminal-body"> 
       <div class="prompt"><b>$ Eddie Berman / Publications <a href="index.html" style="color: #3399ff;">   (Back)</a></b></div>
  <br><div class="input"><u><b>Selected Publications</b></u></div> <br>
- <p><b>Smoothness Errors in Dynamics Models and How to Avoid Them</b><br><u>Edward Berman</u>, Luisa Li, Jung Yeon (John) Park, Robin Walters<br><b>International Conference on Machine Learning: <a href="https://arxiv.org/abs/2602.05352" target="_blank" style="color: #3399ff;">PDF</a> <a href="https://www.luisali.com/research/smoothness" target="_blank" style="color: #3399ff;">Website</a></b> <br> <i>Keywords: Dynamics Modeling, Discrete Differential Geometry</i>
- <p><b>On Uncertainty Calibration for Equivariant Functions</b><br><u>Edward Berman</u>, Jacob Ginesin, Marco Pacini, Robin Walters<br><b>Transactions on Machine Learning Research: <a href="https://openreview.net/pdf?id=rxLUTPLBT3" target="_blank" style="color: #3399ff;">PDF</a> <a href="https://jakegines.in/research/equi-uq" target="_blank" style="color: #3399ff;">Blog</a> </b> <br> <i>Keywords: Equivariance, Uncertainty Quantification</i>
- <p><b>Efficient Point-spread Function Modeling with ShOpt.jl: <br>A Point-spread Function Benchmarking Study with JWST NIRCam Imaging</b><br><u>Edward Berman</u>, Jacqueline McCleary, Anton Koekemoer, Maximilien Franco, et al. <br><b>Astronomical Journal: <a href="https://iopscience.iop.org/article/10.3847/1538-3881/ad6a0f/pdf" style="color: #3399ff;" target="_blank">PDF</a></b> <br> <i>Keywords: Weak Lensing, Computational Imaging</i> <br>&#127776; <b>COSMOS-Web Astronomical Survey Key Project</b> &#127776; </p>
+ <p class="pub" data-fig="pub_figs/armadillos.png" data-alt="Armadillo mesh rollouts comparing smoothness"><span class="pub-text"><b>Smoothness Errors in Dynamics Models and How to Avoid Them</b><br><u>Edward Berman</u>, Luisa Li, Jung Yeon (John) Park, Robin Walters<br><b>International Conference on Machine Learning: <a href="https://arxiv.org/abs/2602.05352" target="_blank" style="color: #3399ff;">PDF</a> <a href="https://www.luisali.com/research/smoothness" target="_blank" style="color: #3399ff;">Website</a></b> <br> <i>Keywords: Dynamics Modeling, Discrete Differential Geometry</i></span></p>
+ <p class="pub" data-fig="pub_figs/equi_uq_fibers.png" data-alt="Confidence fibers for reflection vs rotation invariant models"><span class="pub-text"><b>On Uncertainty Calibration for Equivariant Functions</b><br><u>Edward Berman</u>, Jacob Ginesin, Marco Pacini, Robin Walters<br><b>Transactions on Machine Learning Research: <a href="https://openreview.net/pdf?id=rxLUTPLBT3" target="_blank" style="color: #3399ff;">PDF</a> <a href="https://jakegines.in/research/equi-uq" target="_blank" style="color: #3399ff;">Blog</a> </b> <br> <i>Keywords: Equivariance, Uncertainty Quantification</i></span></p>
+ <p class="pub" data-fig="pub_figs/shopt_psf.png" data-alt="Median F115W star vs ShOpt PSF model and residual"><span class="pub-text"><b>Efficient Point-spread Function Modeling with ShOpt.jl: <br>A Point-spread Function Benchmarking Study with JWST NIRCam Imaging</b><br><u>Edward Berman</u>, Jacqueline McCleary, Anton Koekemoer, Maximilien Franco, et al. <br><b>Astronomical Journal: <a href="https://iopscience.iop.org/article/10.3847/1538-3881/ad6a0f/pdf" style="color: #3399ff;" target="_blank">PDF</a></b> <br> <i>Keywords: Weak Lensing, Computational Imaging</i> <br>&#127776; <b>COSMOS-Web Astronomical Survey Key Project</b> &#127776;</span></p>
  <!-- <p><b>On Soft Clustering for Correlation Estimators</b><br><u>Edward Berman</u>, Sneh Pandya, Jacqueline McCleary, Marko Shuntov, et al.<br><b>Open Journal of Astrophysics:</b> <b><a href="https://arxiv.org/abs/2504.06174" target="_blank" style="color: #3399ff;">PDF</a></b> <b><a href="correlations.html" style="color: #3399ff;">Summary</a></b> <br> <i>Keywords: Weak Lensing, Uncertainty Quantification</i> -->
- <p><b>The State of Julia for Scientific Machine Learning</b><br><u>Edward Berman</u>, Jacob Ginesin<br><b>NeurIPS ML4PS Workshop:</b> <b><a href="https://arxiv.org/pdf/2410.10908" style="color: #3399ff;" target="_blank">PDF</a></b> <br> <i>Keywords: Machine Learning, Perspectives, Julia</i> <br>&#127776; <b>Oral Spotlight (4/300+ Submissions)</b> &#127776;
+ <p class="pub" data-fig="pub_figs/julia_sciml_p1.png" data-alt="First page of The State of Julia for Scientific Machine Learning"><span class="pub-text"><b>The State of Julia for Scientific Machine Learning</b><br><u>Edward Berman</u>, Jacob Ginesin<br><b>NeurIPS ML4PS Workshop:</b> <b><a href="https://arxiv.org/pdf/2410.10908" style="color: #3399ff;" target="_blank">PDF</a></b> <br> <i>Keywords: Machine Learning, Perspectives, Julia</i> <br>&#127776; <b>Oral Spotlight (4/300+ Submissions)</b> &#127776;</span></p>
       <br>
       <p>See <a href="https://scholar.google.com/citations?user=rMjtDxQAAAAJ&hl=en&authuser=2" target="_blank" style="color: #3399ff;">Google Scholar</a> for a complete list.
 
@@ -153,6 +181,51 @@
       </div>
     </div>
   </div>
+<aside class="pub-fig-panel" aria-live="polite">
+    <img id="pubFig" src="pub_figs/armadillos.png" alt="">
+    <div class="pub-fig-caption" id="pubFigCaption"></div>
+  </aside>
+<script>
+  (function () {
+    var term = document.querySelector('.terminal');
+    var pubs = Array.prototype.slice.call(document.querySelectorAll('.pub'));
+    var img = document.getElementById('pubFig');
+    var cap = document.getElementById('pubFigCaption');
+    var current = null;
+    pubs.forEach(function (p) { new Image().src = p.dataset.fig; });
+    function show(p, instant) {
+      if (p === current) return;
+      if (current) current.classList.remove('active');
+      current = p;
+      p.classList.add('active');
+      function swap() {
+        img.src = p.dataset.fig;
+        img.alt = p.dataset.alt;
+        cap.textContent = p.querySelector('b').textContent;
+        img.style.opacity = 1;
+      }
+      if (instant) { swap(); return; }
+      img.style.opacity = 0;
+      setTimeout(swap, 150);
+    }
+    function update(instant) {
+      // the paper shown is the first one whose bottom is past a line near the top of the box
+      var line = term.getBoundingClientRect().top + 140;
+      var best = pubs[pubs.length - 1];
+      for (var i = 0; i < pubs.length; i++) {
+        if (pubs[i].getBoundingClientRect().bottom > line) { best = pubs[i]; break; }
+      }
+      if (term.scrollTop > 0 && term.scrollTop + term.clientHeight >= term.scrollHeight - 2) best = pubs[pubs.length - 1];
+      show(best, instant === true);
+    }
+    pubs.forEach(function (p) {
+      p.addEventListener('mouseenter', function () { show(p); });
+    });
+    term.addEventListener('scroll', update, { passive: true });
+    window.addEventListener('resize', update);
+    update(true);
+  })();
+</script>
 <script>
         document.getElementById("showAsciiBtn").onclick = function() {
             var asciiArt = document.getElementById("asciiArt");

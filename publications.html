@@ -140,6 +140,8 @@
     padding: 16px;
     box-shadow: 0 0 10px rgba(51, 51, 255, 0.5);
   }
+  .pub-fig-panel { transition: opacity 0.25s ease, visibility 0.25s; }
+  .pub-fig-panel.hidden { opacity: 0; visibility: hidden; }
   .pub-fig-panel img {
     display: block;
     width: 100%;
@@ -187,7 +189,7 @@
       </div>
     </div>
   </div>
-<aside class="pub-fig-panel" aria-live="polite">
+<aside class="pub-fig-panel hidden" aria-live="polite">
     <img id="pubFig" src="pub_figs/armadillos.png" alt="">
     <div class="pub-fig-caption" id="pubFigCaption"></div>
   </aside>
@@ -199,33 +201,44 @@
     var cap = document.getElementById('pubFigCaption');
     var current = null;
     pubs.forEach(function (p) { new Image().src = p.dataset.fig; });
+    var panel = document.querySelector('.pub-fig-panel');
+    var hovered = null;
     function show(p, instant) {
       if (p === current) return;
       if (current) current.classList.remove('active');
       current = p;
+      if (!p) { panel.classList.add('hidden'); return; }
       p.classList.add('active');
+      var wasHidden = panel.classList.contains('hidden');
+      panel.classList.remove('hidden');
       function swap() {
         img.src = p.dataset.fig;
         img.alt = p.dataset.alt;
         cap.textContent = p.querySelector('b').textContent;
         img.style.opacity = 1;
       }
-      if (instant) { swap(); return; }
+      if (instant || wasHidden) { swap(); return; }
       img.style.opacity = 0;
       setTimeout(swap, 150);
     }
     function update(instant) {
-      // the paper shown is the first one whose bottom is past a line near the top of the box
-      var line = term.getBoundingClientRect().top + 140;
-      var best = pubs[pubs.length - 1];
+      if (hovered) { show(hovered, instant === true); return; }
+      // a paper is highlighted while it spans a line ~35% of the way down the box;
+      // each paper owns the space up to the next one, so the gaps between them don't flicker
+      var box = term.getBoundingClientRect();
+      var line = box.top + box.height * 0.35;
+      var best = null;
       for (var i = 0; i < pubs.length; i++) {
-        if (pubs[i].getBoundingClientRect().bottom > line) { best = pubs[i]; break; }
+        var top = pubs[i].getBoundingClientRect().top;
+        var end = i + 1 < pubs.length ? pubs[i + 1].getBoundingClientRect().top
+                                      : pubs[i].getBoundingClientRect().bottom;
+        if (line >= top && line < end) { best = pubs[i]; break; }
       }
-      if (term.scrollTop > 0 && term.scrollTop + term.clientHeight >= term.scrollHeight - 2) best = pubs[pubs.length - 1];
       show(best, instant === true);
     }
     pubs.forEach(function (p) {
-      p.addEventListener('mouseenter', function () { show(p); });
+      p.addEventListener('mouseenter', function () { hovered = p; update(); });
+      p.addEventListener('mouseleave', function () { if (hovered === p) hovered = null; update(); });
     });
     term.addEventListener('scroll', update, { passive: true });
     window.addEventListener('resize', update);

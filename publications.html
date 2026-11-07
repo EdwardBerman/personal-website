@@ -190,7 +190,7 @@
     </div>
   </div>
 <aside class="pub-fig-panel hidden" aria-live="polite">
-    <img id="pubFig" src="pub_figs/armadillos.png" alt="">
+    <img id="pubFig" alt="">
     <div class="pub-fig-caption" id="pubFigCaption"></div>
   </aside>
 <script>
@@ -221,28 +221,14 @@
       img.style.opacity = 0;
       setTimeout(swap, 150);
     }
-    function update(instant) {
-      if (hovered) { show(hovered, instant === true); return; }
-      // a paper is highlighted while it spans a line ~35% of the way down the box;
-      // each paper owns the space up to the next one, so the gaps between them don't flicker
-      var box = term.getBoundingClientRect();
-      var line = box.top + box.height * 0.35;
-      var best = null;
-      for (var i = 0; i < pubs.length; i++) {
-        var top = pubs[i].getBoundingClientRect().top;
-        var end = i + 1 < pubs.length ? pubs[i + 1].getBoundingClientRect().top
-                                      : pubs[i].getBoundingClientRect().bottom;
-        if (line >= top && line < end) { best = pubs[i]; break; }
-      }
-      show(best, instant === true);
+    function update() {
+      // only the paper under the cursor gets a figure; otherwise the panel stays empty
+      show(hovered, false);
     }
     pubs.forEach(function (p) {
       p.addEventListener('mouseenter', function () { hovered = p; update(); });
       p.addEventListener('mouseleave', function () { if (hovered === p) hovered = null; update(); });
     });
-    term.addEventListener('scroll', update, { passive: true });
-    window.addEventListener('resize', update);
-    update(true);
   })();
 </script>
 <script>

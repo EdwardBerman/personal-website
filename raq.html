@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Bermanator</title>
+<style>
+#showAsciiBtn {
+            background: none;
+            border: none;
+            color: lightgreen;
+            line-height: 1.5;
+            font-size: 16px; /* Set the font size */
+            /*text-decoration: underline;*/
+            cursor: pointer;
+            padding: 0;
+            font-family: monospace;
+        }
+  #asciiArt {
+            display: none;
+            white-space: pre;
+            font-family: monospace;
+        }
+  body {
+    /*background-image: url('alt_astro_out.png');*/
+    background-image: url('son_2.png');
+    background-size: contain;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    
+    background-color: #0a0a0a;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: bold; /* Make the font bolder */
+    font-size: 20px; /* Adjust this to your preferred size */
+    color: #3399ff;
+    margin: 0;
+    line-height: 1.5; /* Increase the line-height for more space between lines */
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+
+  .terminal {
+    background-color: rgba(13, 13, 13, 0.83);
+    /*background-color: #0d0d0d;*/
+    border-radius: 5px;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(51, 51, 255, 0.5);
+    width: 80%; /* Adjust the width as per your requirement */
+    max-width: 1000px; /* Optional: if you want to limit the maximum width */
+    max-height: 90vh; /* Prevent terminal from exceeding viewport height */
+    overflow: auto; /* Enable scrolling within terminal */
+  }
+
+  .terminal-header {
+    color: #fff;
+    background-color: #333;
+    padding: 2px 10px;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+  }
+
+  .dot {
+    height: 15px;
+    width: 15px;
+    background-color: #f1c40f;
+    border-radius: 50%;
+    display: inline-block;
+    margin-right: 5px;
+  }
+
+  .green-dot {
+    background-color: #2ecc71;
+  }
+
+  .red-dot {
+    background-color: #e74c3c;
+  }
+
+/*
+  .terminal-body {
+    white-space: pre-wrap;
+    overflow-x: auto;
+  }
+
+  .prompt {
+    margin-bottom: 5px;
+  }
+
+  .input {
+    white-space: pre-wrap;
+    display: inline;
+  }
+  */ 
+  .prompt, .input {
+    margin: 0; /* Removes any default margins */
+    padding: 0; /* Removes any default padding */
+    display: block; /* Ensures the element is a block-level element */
+  }
+
+  .terminal-body {
+    padding-left: 20px; /* This padding will align the text with the prompt if necessary */
+    padding-right: 20px; /* Padding to prevent text from touching the right edge */
+  }
+
+  /* Remove padding-left if you added it specifically to .input in earlier styles */
+  .input {
+    white-space: pre-wrap;
+  }
+
+</style>
+</head>
+<body>
+  <div class="terminal">
+    <div class="terminal-body"> 
+      <div class="prompt">$ Eddie Berman / About / Rarely Asked Questions <a href="about.html" style="color: #3399ff;">   (Back)</a></div><br>
+      <!-- inspiration: https://web.evanchen.cc/faq-raqs.html -->
+      Questions I've only been asked once or twice, but I thought demanded a sufficient answer.
+      <ul>
+        <li><b>What inspired your rarely asked questions?</b> <br><a href="https://web.evanchen.cc/faq-raqs.html" style="color: #3399ff;" target="_blank">https://web.evanchen.cc/faq-raqs.html</a></li><br>
+        <li>How do I get into Astronomy research?<br>I really don't do much Astronomy anymore, but because Northeastern only has a handful of Astrophysicists and I got to work with one of them for basically all of my UG, I get asked this a lot. And, it's difficult to answer, because it is difficult to tell someone to search widely when they can write a personalized email to every faculty member in the department and still receive no luck. My actionable advice to Northeastern students would be to consider working at any Boston area institution, not just Northeastern. This will broaden your search, and it is healthy to experience research environments at several different institutions anyway. I would also recommend taking the Astronomy courses if you can fit them in your schedule. You're much more likely to be able to reach a professor if you take one of them, do well, and perhaps most importantly, show some enthusiasm! Also, Jacqueline is awesome, so try to work with Jacqueline!</li><br>
+        <li>Should I do a PhD?<br>I think so! I'll highlight <a href="https://web.mit.edu/phillipi/www/writing/PhD-in-age-of-AI.html" style="color: #3399ff;" target="_blank">Phillip Isola's 2 cents on this</a>. Now, I'm not a zealot. I know (and have seen) academia at its worst. And with uncertainty around AI, funding and political uncertainty (in the US at least), and the allure of prominent startups and quant firms offering potentially generational wealth, I understand the trepidation. As for reasons why to do a PhD, I would echo Phillip Isola's points, particularly those about doing work in the open and the love of the game. There are two things I would add to this. First is the culture and the people. Sure, academics can be snobby and arrogant, but the relationships that I've formed in my time in academia have been truly special. Our shared goal as academics is to understand and create, not building the Employment-Eradictator-9000. The second is I love writing and telling stories, and academia lets me do that. I think in time, you will too!</li><br>
+        <li>What's the best way to get around Boston?<br>Get a bike.</li><br>
+        <li>What is the best city to live in?<br>Boston. Obviously.</li><br>
+        <li>Retrospective on Northeastern?<br>Some sporadic thoughts. The math department really cared about its students, and were responsible for some of my best friends and favorite courses. I had great experiences doing research both in Khoury and the Cosmology group. It was nice to be at a university with a strong PL presence. I am no PL expert but absorbed some concepts through osmosis, and I think it helped my maturity as a CS researcher. The co-op thing is a bit of a scam. The companies Northeastern has a strong relationship with aren't particularly strong in any way one might care about (both in terms of the quality of the work itself, the pay and prestige, really anything). There isn't much precedent for getting into things like a well funded startup or a quant firms, and even getting into a big tech company is a bit of a rarity, though all of these things are changing as Northeastern improves. I think my co-op advisors gave me bad advice (which thankfully I ignored). No PhD program would have cared about me selling out to John Hancock for instance. My somewhat cynical and maybe conspiratorial take is that Northeastern really provides <i>downwards mobility</i>, a lot of students come in from loaded families and end up in middling careers.</li><br>
+        <li>Where did you co-op?<br>I did two research co-ops at Northeastern in the Physics department. I also interned at the center for astrophysics and air force research laboratory, and did a summer REU.</li><br>
+        <li>Who are your mentors?<br>Some of my primary mentors have been my UG peers at Northeastern. We navigated academia and grew together, covering each others weakpoints and lifting each other up :). Part of what made it special is we really sought each other out and found a research community in each other. Serendipity played a role of course, but to keep things as exciting as it was took conscious effort! My primary research advisors were Robin Walters and Jacqueline McCleary. I am also greatful to Cecilia Garraffo and her guidance during my time at the CfA and also Bill Freeman and his lab. I was also pretty luck to get to talk to Jonathan Blazek often. Now I am a PhD student, mentored by Melanie Weber. Outside of academia, my hockey coaches and teammates over the years have really shaped who I am. Shoutout to Twin Oaks Ice Rink in Morristown NJ.</li><br>
+        <li>Are you happy?<br>Generally, yeah! :D</li><br>
+        <li>What should I major in?<br>Math.</li><br>
+      </ul>
+     </div>
+      </div>
+    </div>
+  </div>
+<script>
+        document.getElementById("showAsciiBtn").onclick = function() {
+            var asciiArt = document.getElementById("asciiArt");
+            asciiArt.style.display = asciiArt.style.display === "none" ? "block" : "none";
+        };
+    </script>
+</body>
+</html>
+
